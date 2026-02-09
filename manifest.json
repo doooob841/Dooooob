@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube History Cleaner (JEE/NEET/CBSE)",
+  "version": "1.0.0",
+  "description": "Removes non-educational videos from YouTube watch history, keeping JEE/NEET/CBSE content.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://www.youtube.com/feed/history*"],
+  "action": {
+    "default_title": "History Cleaner",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/feed/history*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
